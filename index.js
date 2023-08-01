@@ -102,7 +102,7 @@ const calculeTime = (timeEnd, timeStart) => {
     return timeEndMiliseconds - timeStartMiliseconds
 }
 const fixedTime = (time) => {
-    return time.replaceAll(',', '.').slice(0, -1)
+    return time.split(',').join('.').slice(0, -1)
 }
 const arreglarSentenceASS = (sentence) => {
     const chartNotSpace = ["'", '-', "`"]

@@ -37,7 +37,7 @@ ScaledBorderAndShadow: No`
 
     let styles = `[V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style:Default,C059,25,&H00FFFF00,&H03FFFFFF,&H00000000,&H02000000,1,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1`
+Style:Default,Roboto,25,&H00FFFF00,&H03FFFFFF,&H00000000,&H02000000,1,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1`
 
     let eventsHeader = `[Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`

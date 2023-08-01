@@ -1,0 +1,9 @@
+{
+  "name": "srt2karaoke",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "srtparsejs": "^1.0.8"
+  }
+}

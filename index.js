@@ -8,6 +8,7 @@ const MAX_LENGHT_DEFAULT = 15
 let MAX_LENGHT
 let COLOR1
 let COLOR2
+let SIZE
 let newSrt = []
 let actualSentence = []
 
@@ -41,7 +42,7 @@ ScaledBorderAndShadow: No`
 
     let styles = `[V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style:Default,Roboto,25,&H${COLOR1},&H${COLOR2},&H00000000,&H02000000,1,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1`
+Style:Default,Roboto,${SIZE},&H${COLOR1},&H${COLOR2},&H00000000,&H02000000,1,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1`
 
     let eventsHeader = `[Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`

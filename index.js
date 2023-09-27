@@ -6,6 +6,8 @@ const initCode = "<font color=#" + COLOR + ">"
 const endCode = "</font>"
 const MAX_LENGHT_DEFAULT = 15
 let MAX_LENGHT
+let COLOR1
+let COLOR2
 let newSrt = []
 let actualSentence = []
 
@@ -39,7 +41,7 @@ ScaledBorderAndShadow: No`
 
     let styles = `[V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style:Default,Roboto,25,&H00${COLOR},&H03FFFFFF,&H00000000,&H02000000,1,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1`
+Style:Default,Roboto,25,&H${COLOR_1},&H${COLOR_2},&H00000000,&H02000000,1,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1`
 
     let eventsHeader = `[Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
@@ -156,13 +158,15 @@ const srt2karaoke = (infile, outfile, type) => {
 
 const start = () => {
     if (process.argv.length < 4) {
-        console.log('Usage: node index.js <infile> <outfile> [srt|ass] [max_lenght]')
+        console.log('Usage: node index.js <infile> <outfile> [srt|ass] [max_lenght] [color1] [color2]')
         return
     }
     const infile = process.argv[2]
     const outfile = process.argv[3]
     const type = process.argv[4] || 'ass'
     MAX_LENGHT = (process.argv[5]) || MAX_LENGHT_DEFAULT
+    COLOR1 = (process.argv[6]) || "03FFFFFF"
+    COLOR2 = (process.argv[7]) || "001B39E3"
     srt2karaoke(infile, outfile,type)
 }
 

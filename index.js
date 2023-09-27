@@ -4,7 +4,8 @@ const path = require('path')
 const COLOR = 'E3391B'
 const initCode = "<font color=#" + COLOR + ">"
 const endCode = "</font>"
-const MAX_LENGHT = 15
+const MAX_LENGHT_DEFAULT = 15
+let MAX_LENGHT
 let newSrt = []
 let actualSentence = []
 
@@ -155,12 +156,13 @@ const srt2karaoke = (infile, outfile, type) => {
 
 const start = () => {
     if (process.argv.length < 4) {
-        console.log('Usage: node index.js <infile> <outfile> [srt|ass]')
+        console.log('Usage: node index.js <infile> <outfile> [srt|ass] [max_lenght]')
         return
     }
     const infile = process.argv[2]
     const outfile = process.argv[3]
     const type = process.argv[4] || 'ass'
+    MAX_LENGHT = (process.argv[5]) || MAX_LENGHT_DEFAULT
     srt2karaoke(infile, outfile,type)
 }
 

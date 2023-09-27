@@ -1,9 +1,9 @@
 const srtparsejs = require('srtparsejs')
 const fs = require('fs')
 const path = require('path')
-const initCode = "<font color=#ffff00>"
+const initCode = "<font color=#E3391B>"
 const endCode = "</font>"
-const MAX_LENGHT = 30
+const MAX_LENGHT = 15
 let newSrt = []
 let actualSentence = []
 

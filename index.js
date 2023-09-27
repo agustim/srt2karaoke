@@ -165,7 +165,7 @@ const start = () => {
     const outfile = process.argv[3]
     const type = process.argv[4] || 'ass'
     MAX_LENGHT = (process.argv[5]) || MAX_LENGHT_DEFAULT
-    SIZE = = (process.argv[6]) || 20 
+    SIZE = (process.argv[6]) || 20 
     COLOR1 = (process.argv[7]) || "03FFFFFF"
     COLOR2 = (process.argv[8]) || "001B39E3"
     srt2karaoke(infile, outfile,type)
